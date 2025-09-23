@@ -1,7 +1,7 @@
 # VoidVim
 
 >[!WARNING]
-> Muita coisa não foi testada ainda, e possuí plugins que nem estão configurados, e vou precisar da ajuda da comunidade porque eu acbei me perdendo no código, e preciso anotar todos os erros, então se encontrar um, POR FAVOR me avise!
+> Muita coisa não foi testada ainda, e possuí plugins que nem estão configurados, vou precisar da ajuda da comunidade porque eu acbei me perdendo no código, e preciso anotar todos os erros, então se encontrar um, POR FAVOR me avise!
 
 ![Ícone do Voidvim, caso não esteja claro](https://filesbycubo3d.vercel.app/filesbyvoidvim/voidvimlogo.jpg)
 
@@ -21,6 +21,8 @@ Mas para facilitar eu irei colar todos keymaps aqui nesse arquivo markdown(mais 
 
 Git e wget instalados
 
+Deixe o tamnho da fonte como 10 para uma melhor experiência
+
 POR FAVOR, NÃO USE ELE NO WINDOWS, ELE FOI TOTALMENTE CRIADO NO E PARA LINUX, mas posso tentar desenvolver uma versão pro Windows
 
 ## Instalação
@@ -29,7 +31,7 @@ POR FAVOR, NÃO USE ELE NO WINDOWS, ELE FOI TOTALMENTE CRIADO NO E PARA LINUX, m
 wget https://filesbycubo3d.vercel.app/filesbyvoidvim/instalacao.sh && sh instalacao.sh
 ```
 
-Quando quiser atualizar os plugins, usando o :Lazy update, deixe que eu faço, irei atualizar a cada semana, oferecendo correção de bugs novos que vem na atualização e rafatorando partes que, antes não eram, obsoletas
+Quando quiser atualizar os plugins, usando o :Lazy update, deixe que eu faço, irei atualizar a cada semana, oferecendo correção de bugs novos que vem na atualização e rafatorando partes que, antes não eram, obsoletas. Apenas execute :VVUpdate
 
 ## mapas de chaves
 
