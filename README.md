@@ -26,7 +26,7 @@ POR FAVOR, NÃO USE ELE NO WINDOWS, ELE FOI TOTALMENTE CRIADO NO E PARA LINUX, m
 ## Instalação
 
 ```
-wget https://filesbycubo3d.vercel.app/filesbyvoidvim/script.sh && sh instalacao.sh
+wget https://filesbycubo3d.vercel.app/filesbyvoidvim/instalacao.sh && sh instalacao.sh
 ```
 
 Quando quiser atualizar os plugins, usando o :Lazy update, deixe que eu faço, irei atualizar a cada semana, oferecendo correção de bugs novos que vem na atualização e rafatorando partes que, antes não eram, obsoletas
