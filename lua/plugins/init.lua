@@ -4,12 +4,15 @@
 -- Configuração e Instalação dos plugins --
 -------------------------------------------
 
+-- Somente deixo a configuração de alguns plugins quando ela passa mais de 36 linhas, ou quando fica mais bonito em um arquivo separado(um exemplo seria a configuração do Dashboard NVim)
+
+
 require("lazy").setup({
 
-    -- Dashboard
+    -- Dashboard NVim
     require("plugins.plugins_config.ui.dashboard"),
 
-    -- Neo Tree
+    -- NeoTree
     require("plugins.plugins_config.core.neotree"),
 
     -- LSP
@@ -21,7 +24,7 @@ require("lazy").setup({
     -- BufferLine NVim
     require("plugins.plugins_config.ui.bufferline"),
 
-
+    
     -- LazyGit
     {
         "kdheepak/lazygit.nvim"
@@ -35,6 +38,10 @@ require("lazy").setup({
     -- Diff View
     {
         "sindrets/diffview.nvim"
+    },
+
+    {
+        "brianhuster/live-preview.nvim"
     },
 
     -- Git Signs
@@ -117,22 +124,6 @@ require("lazy").setup({
         opts = {},
     },
 
-    -- Live-Server
-    {
-        "barrett-ruth/live-server.nvim",
-        build = "sudo npm install -g live-server",
-        config = function()
-            require("live-server").setup({
-                cmd = "live-server",
-                browser = "default", 
-                no_css_inject = false,
-                ignore = "node_modules",
-            })
-        end
-    },
-
-
-
     -- Nvim-Notify
     {
         "rcarriga/nvim-notify",
@@ -148,65 +139,6 @@ require("lazy").setup({
             })
             vim.notify = require("notify")
         end
-    },
-
-    -- GitHub Preview
-    {
-    "wallpants/github-preview.nvim",
-    cmd = { "GithubPreviewToggle" },
-    build = "make build",
-    keys = { "<leader>mpt" },
-    opts = {
-        host = "localhost",
-
-        -- port used by local server
-        port = 6041,
-
-        -- set to "true" to force single-file mode & disable repository mode
-        single_file = false,
-
-        theme = {
-            -- "system" | "light" | "dark"
-            name = "system",
-            high_contrast = false,
-        },
-
-        -- define how to render <details> tags on init/content-change
-        -- true: <details> tags are rendered open
-        -- false: <details> tags are rendered closed
-        details_tags_open = true,
-
-        cursor_line = {
-            disable = false,
-
-            -- CSS color
-            -- if you provide an invalid value, cursorline will be invisible
-            color = "#c86414",
-            opacity = 0.2,
-        },
-
-        scroll = {
-            disable = false,
-
-            -- Between 0 and 100
-            -- VERY LOW and VERY HIGH numbers might result in cursorline out of screen
-            top_offset_pct = 35,
-        },
-
-            -- for debugging
-            -- nil | "debug" | "verbose"
-            log_level = nil,
-    },
-
-        config = function(_, opts)
-            local gpreview = require("github-preview")
-            gpreview.setup(opts)
-
-            local fns = gpreview.fns
-            vim.keymap.set("n", "<leader>mpt", fns.toggle)
-            vim.keymap.set("n", "<leader>mps", fns.single_file_toggle)
-            vim.keymap.set("n", "<leader>mpd", fns.details_tags_toggle)
-        end,
     },
 
     -- Move NVim

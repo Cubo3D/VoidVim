@@ -1,8 +1,5 @@
 # VoidVim
 
->[!WARNING]
-> Muita coisa não foi testada ainda, e possuí plugins que nem estão configurados, vou precisar da ajuda da comunidade porque eu acbei me perdendo no código, e preciso anotar todos os erros, então se encontrar um, POR FAVOR me avise!
-
 ![Ícone do Voidvim, caso não esteja claro](https://filesbycubo3d.vercel.app/filesbyvoidvim/voidvimlogo.jpg)
 
 O VoidVim é uma nova distribuição NeoVim que foi criada por um programador solo Brasileiro🇧🇷.
@@ -11,35 +8,44 @@ Ele tende a ser leve, porque a ideia surgiu de quando estava usando o vscode mas
 
 Ele foi criado do 0!
 
-Obs: Eu criei ele sem colar ele em um repositório, fiz a base e já lancei. NÃO REPITA ISSO eu aceito enfrentando problemas e passei pela independência de eu perder tudo se meu notebook desse problema (detalhe: eu só fiz isso porque eu queria saber se realmente preciso, e aprender na prática).
-
 Ele não possuí uma Wiki, pois ele não precisa, os comentários explícitos tudo no preço código
 
 Mas para facilitar eu irei colar todos keymaps aqui nesse arquivo markdown(mais baixo)
 
-## Requisitos
+## Depedências
 
-Git e wget instalados
+1. Git;
 
-Deixe o tamnho da fonte como 10 para uma melhor experiência
+2. LazyGit(para poder usar o plugin do lazygit)
 
-POR FAVOR, NÃO USE ELE NO WINDOWS, ELE FOI TOTALMENTE CRIADO NO E PARA LINUX, mas posso tentar desenvolver uma versão pro Windows
+3. Wget;
+
+4. Nvm;
+
+5. Npm;
+
+
+>[!TIP]
+>Tamnho da fonte do terminal como 10 para uma melhor experiência(Opcional, mas recomandado);
+
+>[!WARNING]
+>POR FAVOR, NÃO USE ELE NO WINDOWS, ELE FOI TOTALMENTE CRIADO NO LINUX E PARA LINUX! Mas posso tentar desenvolver uma versão pro Windows
 
 ## Instalação
 
-```
+```bash
 wget https://filesbycubo3d.vercel.app/filesbyvoidvim/instalacao.sh && sh instalacao.sh
 ```
 
-Quando quiser atualizar os plugins, usando o :Lazy update, deixe que eu faço, irei atualizar a cada semana, oferecendo correção de bugs novos que vem na atualização e rafatorando partes que, antes não eram, obsoletas. Apenas execute :VVUpdate
+Para atualizar o VoidVim, execute :VNUpdate(Nas versão alpha se usava :VVUpdate)
 
-## mapas de chaves
+## Keymaps
 
 ```
 \gg: Abre o lazygit
 
 \Q: Fecha sem salvar o arquivo(criado a fim de não precisar usar como duas mães)
-\q: Fecha o arquivo(criado a fim de não precisar usar como duas mães)
+\q: Esconde o scroll que tem no lado para melhorar a visão
 \W: Salva e fecha o arquivo(criado a fim de não precisar usar como duas mães)
 \w: Salva o arquivo(criado a fim de não precisar usar como duas mães)
 
@@ -53,7 +59,13 @@ Quando quiser atualizar os plugins, usando o :Lazy update, deixe que eu faço, i
 
 \d: Abre o Dashboard
 
-\s: Executa/para o live-server
+\s: Executa o live-preview
+\S: Para o live-preview
+
+\bd: Apaga os buffers
+
+Ctrl + d: Vai para o próximo buffer conforme o bufferline
+Ctrl + a: Vai para o buffer anterior conforme o bufferline
 ```
 
 Keymaps do LSP:
@@ -67,7 +79,6 @@ K: Mostra informações sobre o elemento sob o cursor
 \ca: Mostra ações do código disponíveis. Execute no modo normal/visual
 
 gr: Lista todas as referências á função/variável sob o cursor. Execute no modo normal
-
 ```
 
 Cada vez mais irei tentar melhorar o VoidVim

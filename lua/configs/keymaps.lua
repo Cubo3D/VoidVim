@@ -28,7 +28,10 @@ vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', { noremap = true, silent = tr
 
 
 -- Toggle do Neo Tree
-vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle ~<CR>', { noremap = true, silent = true, desc = "Toggle do NeoTree" })
+vim.keymap.set('n', '<leader>e', function()
+    vim.cmd("Neotree toggle source=filesystem dir=" .. vim.fn.expand("~"))
+end, { noremap = true, silent = true, desc = "Mostra o NeoTree" })
+
 vim.keymap.set('n', '<leader>v', '<cmd>Neotree focus<CR>', { noremap = true, silent = true, desc = "Mudar o foco para o buffer do NeoTree" })
 
 
@@ -43,10 +46,12 @@ vim.keymap.set('n', '<leader>l', '<cmd>FloatermNext<CR>', { noremap = true, sile
 vim.keymap.set('n', '<leader>d', '<cmd>Dashboard<CR>', { noremap = true, silent = true, desc = "Volta pro Dashboard" })
 
 
--- Keymap para live-server
-vim.keymap.set('n', '<leader>s', '<cmd>LiveServerToggle<CR>', { noremap = true, silent = true, desc = "Executa/para o live server" })
+-- Keymap para livepreview
+vim.keymap.set('n', '<leader>s', '<cmd>LivePreview start<CR>', { noremap = true, silent = true, desc = "Executa o live preview" })
+vim.keymap.set('n', '<leader>S', '<cmd>LivePreview close<CR>', { noremap = true, silent = true, desc = "Para o live preview" })
 
 
+-- BufferLine
 -- Navegação entre buffers
 vim.keymap.set('n', '<C-d>', '<cmd>BufferLineCycleNext<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<C-a>', '<cmd>BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })

@@ -10,7 +10,7 @@ return {
     },
     config = function ()
         require('neo-tree').setup({
-            close_if_last_window = false, -- Fecha o Neo-tree se for a última janela aberta
+            close_if_last_window = true, -- Fecha o Neo-tree se for a última janela aberta
             popup_border_style = "rounded", -- "single", "double", "solid", "rounded", "none"
             enable_git_status = true,
             enable_diagnostics = true,
@@ -33,6 +33,14 @@ return {
                 trailing_slash = false,
                 use_git_status_colors = true,
             },
+            },
+            event_handlers = {
+                {
+                    event = "file_opened",
+                    handler = function(file_path)
+                        require("neo-tree.command").execute({ action = "close" })
+                    end,
+                },
             git_status = {
                 symbols = {
                     added     = "✚", -- ou ""
@@ -57,9 +65,9 @@ return {
             },
             filesystem = {
                 filtered_items = {
-                    visible = true, -- quando true, mostra itens ocultos (dotfiles) por padrão
-                    hide_dotfiles = false,
-                    hide_gitignored = true,
+                    visible = false, -- quando true, mostra itens ocultos (dotfiles) por padrão
+                    hide_dotfiles = true,
+                    hide_gitignored = false,
                     hide_by_name = {
                         -- "node_modules"
                     },

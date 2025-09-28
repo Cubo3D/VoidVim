@@ -1,5 +1,7 @@
 -- ~/.config/nvim/lua/plugins/plugins_config/core/nvim_illuminate.lua
 
+-- NVim Illuminate
+
 return {
     "RRethy/vim-illuminate",
     event = "BufReadPost",

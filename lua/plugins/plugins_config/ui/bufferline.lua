@@ -1,3 +1,7 @@
+-- ~/.config/nvim/lua/plugins/plugins_config/ui/bufferline.lua
+
+-- BufferLine NVim
+
 return {
     'akinsho/bufferline.nvim',
     version = '^4', -- Versão mais específica para evitar quebras

@@ -1,6 +1,7 @@
 -- ~/.config/nvim/lua/plugins/plugins/config/ui/dashboard.lua
 
 -- Dashboard NVim
+
 return {
     'glepnir/dashboard-nvim',
     event = 'VimEnter',
@@ -20,17 +21,19 @@ return {
                     " ╚████╔╝ ╚██████╔╝██║██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
                     "  ╚═══╝   ╚═════╝ ╚═╝╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
 
-                    'Version Alpha 0.1',
+                    'Version Beta 0.1',
                 },
                 shortcut = {
-                    { desc = '⏎ Exit', group = 'Label', action = 'q', key = 'q' },
-                    { desc = ' Files', group = 'Label', action = 'Neotree toggle ~', key = 't' },
-                    { desc = ' Config', group = 'Label', action = 'Neotree  ~/.config/nvim/', key = 'c' },
+                    { desc = '⥺ Exit', group = 'Label', action = 'q', key = 'q' },
+                    { desc = ' Files', group = 'Label', action = 'Neotree toggle', key = 't' },
+                    { desc = ' Config', group = 'Label', action = 'Neotree ' .. vim.fn.expand('~') .. '/.config/nvim/', key = 'c' }
                 },
-                mru = { limit = 9 },
+                mru = { limit = 8 },
                 footer = {
                     '',
-                    'THE VOID IS INFINITE' -- Coloquei porque estou no tema de terror
+                    'THE VOID HAS AN END(?)',
+                    '',
+                    'Meu GitHub: https://github.com/Cubo3D'
                 },
             }
         })
