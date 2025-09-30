@@ -25,27 +25,40 @@ require("opt.init")
 require("configs.keymaps")
 require("plugins.init")
 
-vim.api.nvim_create_user_command('VNUpdate', function()
-    os.execute("cd ~/.config/nvim")
 
+vim.api.nvim_create_user_command('VNUpdate', function()
+    local config_dir = vim.fn.stdpath('config')
+    
+    vim.fn.chdir(config_dir)
+    
     local handle = io.popen("git fetch --dry-run 2>&1")
     local fetch_result = handle:read("*a")
     handle:close()
 
     if fetch_result == "" then
-        print("O VoidVim já está atualizada.")
-        os.execute("cd ~")
+        print("O VoidVim já está atualizado.")
         return
     end
 
-    os.execute("git pull origin")
+    print("Atualizando VoidVim...")
+    
+    local pull_handle = io.popen("git pull --force 2>&1")
+    local pull_result = pull_handle:read("*a")
+    local success, _, exit_code = pull_handle:close()
+    
+    if not success or exit_code ~= 0 then
+        print("Erro ao atualizar VoidVim: " .. pull_result)
+        return
+    end
 
+    print(pull_result)
+    
     vim.cmd('Lazy sync')
-    os.execute("rm -rf LICENCE README.md")
+    
+    os.execute("rm -f LICENCE README.md")
+    
     print("O VoidVim foi atualizado com sucesso!")
-    print("Reiniciando o VoidVim...")
-
-    os.execute("cd ~")
+    print("Reinicie o Neovim para que as alterações entrem em vigor.")
 end, {})
 
 -- Obs: Os comentários só são uma "ajuda" pra quem quer analisar o código, ou os que querem fazer uma fork do projeto, caso queira que fazer suas próprias configurações dê uma olhada na pasta ~/.config/nvim/lua/opt
