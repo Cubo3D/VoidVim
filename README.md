@@ -1,6 +1,7 @@
 # VoidVim
 
 ![Ícone do Voidvim, caso não esteja claro](https://filesbycubo3d.vercel.app/filesbyvoidvim/voidvimlogo.jpg)
+(Normalmente ele tem o fundo transparente, mas se eu colocar no github vai ficar difícil de visualizar)
 
 O VoidVim é uma nova distribuição NeoVim que foi criada por um programador solo Brasileiro🇧🇷.
 
@@ -12,18 +13,29 @@ Ele não possuí uma Wiki, pois ele não precisa, os comentários explícitos tu
 
 Mas para facilitar eu irei colar todos keymaps aqui nesse arquivo markdown(mais baixo)
 
+## Prints
+
+![dashboard](https://filesbycubo3d.vercel.app/filesbyvoidvim/dashboard.png)
+
+![código](https://filesbycubo3d.vercel.app/filesbyvoidvim/codigo.png)
+
+![lazygit](https://filesbycubo3d.vercel.app/filesbyvoidvim/lazygit.png)
+
+![lazy.nvim](https://filesbycubo3d.vercel.app/filesbyvoidvim/lazynvim.png)
+
 ## Depedências
 
-1. Git;
+1. Wget(Para a instalação, só é necessário para poder instalar ele);
 
-2. LazyGit(para poder usar o plugin do lazygit)
+2. Npm(Sem ele você não vai conseguir fazer download da maioria dos plugins, colocado como uma depedência obrigatória);
 
-3. Wget;
+3. Nvm(Serve para usar o npm sem precisa do root(opcional, mas recomendado até mesmo fora do projeto));
 
-4. Nvm;
+4. Git(Para poder usar em plugins git(opcional));
 
-5. Npm;
+5. LazyGit(Para poder usar o plugin do lazygit(opcional))
 
+Em atualizações futuras o script de atualização vai instalar automáticamente as depedências
 
 >[!TIP]
 >Tamnho da fonte do terminal como 10 para uma melhor experiência(Opcional, mas recomandado);

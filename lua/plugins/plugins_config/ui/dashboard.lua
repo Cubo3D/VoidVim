@@ -7,6 +7,14 @@ return {
     event = 'VimEnter',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
+        vim.cmd([[
+            " Cores personalizadas para o dashboard
+            highlight DashboardShortCut guifg=#8be9fd
+            highlight DashboardDesc guifg=#50fa7b
+            highlight DashboardIcon guifg=#bd93f9
+            highlight DashboardFooter guifg=#bdbdbd gui=italic
+        ]])
+
         require('dashboard').setup({
             theme = 'hyper',
             config = {
@@ -33,9 +41,18 @@ return {
                     '',
                     'THE VOID HAS AN END(?)',
                     '',
-                    'Meu GitHub: https://github.com/Cubo3D'
+                    'Meu GitHub : https://github.com/Cubo3D'
                 },
             }
         })
+   -- Aplicar cores aos elementos específicos após o setup
+        vim.cmd([[
+            " Aplicar cores aos elementos do dashboard
+            autocmd FileType dashboard highlight DashboardShortCut guifg=#8be9fd
+            autocmd FileType dashboard highlight DashboardDesc guifg=#50fa7b
+            autocmd FileType dashboard highlight DashboardIcon guifg=#bd93f9
+            autocmd FileType dashboard highlight DashboardFooter guifg=#bdbdbd gui=italic
+            "autocmd FileType dashboard highlight DashboardFooter guifg=#ff0000 gui=italic
+        ]])
     end
 }

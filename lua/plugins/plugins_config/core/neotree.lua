@@ -65,8 +65,8 @@ return {
             },
             filesystem = {
                 filtered_items = {
-                    visible = false, -- quando true, mostra itens ocultos (dotfiles) por padrão
-                    hide_dotfiles = true,
+                    visible = true, -- quando true, mostra itens ocultos (dotfiles) por padrão
+                    hide_dotfiles = false,
                     hide_gitignored = false,
                     hide_by_name = {
                         -- "node_modules"
