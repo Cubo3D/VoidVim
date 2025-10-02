@@ -24,7 +24,9 @@ require("lazy").setup({
     -- BufferLine NVim
     require("plugins.plugins_config.ui.bufferline"),
 
-    
+    -- Conform NVim
+    require("plugins.plugins_config.core.conform"),
+
     -- LazyGit
     {
         "kdheepak/lazygit.nvim"
@@ -82,11 +84,6 @@ require("lazy").setup({
     -- Vim Fugitive
     {
         "tpope/vim-fugitive"
-    },
-
-    -- Conform NVim
-    {
-        "stevearc/conform.nvim"
     },
 
     -- Telescope

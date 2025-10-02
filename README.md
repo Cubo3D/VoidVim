@@ -25,23 +25,30 @@ Mas para facilitar eu irei colar todos keymaps aqui nesse arquivo markdown(mais 
 
 ## Depedências
 
-1. Wget(Para a instalação, só é necessário para poder instalar ele);
+1. Versão mais recente do NeoVim(não é necessário beta, aliás ele não vai usar os recursos da versão beta)
 
-2. Npm(Sem ele você não vai conseguir fazer download da maioria dos plugins, colocado como uma depedência obrigatória);
+2. Wget(Para a instalação, só é necessário para poder instalar ele);
 
-3. Nvm(Serve para usar o npm sem precisa do root(opcional, mas recomendado até mesmo fora do projeto));
+3. Npm(Sem ele você não vai conseguir fazer download da maioria dos plugins, colocado como uma depedência obrigatória);
 
-4. Git(Para poder usar em plugins git(opcional));
+4. Pipx(Para poder instalar o formatador para python)
 
-5. LazyGit(Para poder usar o plugin do lazygit(opcional))
+5. Nvm(Serve para usar o npm sem precisa do root(opcional, mas recomendado até mesmo fora do projeto));
+
+6. Git(Para poder usar em plugins git(opcional));
+
+7. LazyGit(Para poder usar o plugin do lazygit(opcional))
 
 Em atualizações futuras o script de atualização vai instalar automáticamente as depedências
 
->[!TIP]
->Tamnho da fonte do terminal como 10 para uma melhor experiência(Opcional, mas recomandado);
+> [!TIP]
+> Tamnho da fonte do terminal como 10 para uma melhor experiência(Opcional, mas recomandado);
 
->[!WARNING]
->POR FAVOR, NÃO USE ELE NO WINDOWS, ELE FOI TOTALMENTE CRIADO NO LINUX E PARA LINUX! Mas posso tentar desenvolver uma versão pro Windows
+> [!WARNING]
+> POR FAVOR, NÃO USE ELE NO WINDOWS, ELE FOI TOTALMENTE CRIADO NO LINUX E PARA LINUX! Mas posso tentar desenvolver uma versão pro Windows
+
+> [!IMPORTANT]
+> Quando tem atualização no comando :VNUpdate, recomenda-se fazer a atualização manualmente, que para fazer isso, é só entrar na pasta de configuração do VoidVim e executar "git pull" (sem as aspas)
 
 ## Instalação
 
@@ -81,6 +88,7 @@ Ctrl + a: Vai para o buffer anterior conforme o bufferline
 ```
 
 Keymaps do LSP:
+
 ```
 gd: Vai direto para definição da função/variável sob o cursor. Execute no modo normal
 
@@ -94,4 +102,3 @@ gr: Lista todas as referências á função/variável sob o cursor. Execute no m
 ```
 
 Cada vez mais irei tentar melhorar o VoidVim
-

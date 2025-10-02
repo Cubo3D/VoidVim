@@ -34,7 +34,8 @@ return {
                 shortcut = {
                     { desc = '⥺ Exit', group = 'Label', action = 'q', key = 'q' },
                     { desc = ' Files', group = 'Label', action = 'Neotree toggle', key = 't' },
-                    { desc = ' Config', group = 'Label', action = 'Neotree ' .. vim.fn.expand('~') .. '/.config/nvim/', key = 'c' }
+                    { desc = ' Config', group = 'Label', action = 'Neotree ' .. vim.fn.expand('~') .. '/.config/nvim/', key = 'c' },
+                    { desc = ' Find Files', group = 'Label', action = 'Telescope find_files', key = 'f' }
                 },
                 mru = { limit = 8 },
                 footer = {

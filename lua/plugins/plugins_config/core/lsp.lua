@@ -17,6 +17,23 @@ return {
     end
   },
 
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+    },
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "prettier",
+          "stylua",
+          "black"
+        }
+      })
+    end
+  },
+
   -- LSPconfig - ainda estou mantendo por questões de compatibilidade
   {
     "neovim/nvim-lspconfig",
