@@ -51,7 +51,7 @@ vim.api.nvim_create_user_command("VNUpdate", function()
 
 	print(pull_result)
 
-	vim.cmd("Lazy update")
+	vim.cmd("Lazy restore")
 
 	--    os.execute("rm -f LICENCE README.md")
 
