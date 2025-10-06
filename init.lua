@@ -5,7 +5,6 @@
 ----------------------------
 
 -- Instalação automática do lazy.nvim
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -19,7 +18,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("configs.config")
+-- Bloqueio de modificações no arquivo lockfile (lazy-lock.json)
+lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", require("configs.config")
 require("opt.init")
 require("configs.keymaps")
 require("plugins.init")

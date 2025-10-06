@@ -17,6 +17,7 @@ return {
 			theme = "doom",
 			config = {
 				header = {
+					"",
 					"██╗   ██╗ ██████╗ ██╗██████╗ ██╗   ██╗██╗███╗   ███╗",
 					"██║   ██║██╔═══██╗██║██╔══██╗██║   ██║██║████╗ ████║",
 					"██║   ██║██║   ██║██║██║  ██║██║   ██║██║██╔████╔██║",
@@ -24,7 +25,9 @@ return {
 					" ╚████╔╝ ╚██████╔╝██║██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
 					"  ╚═══╝   ╚═════╝ ╚═╝╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
 					"",
-					"Version Beta 0.1",
+					"Versão Beta 0.1.9",
+					"",
+					"",
 					"",
 					"",
 				},
@@ -45,7 +48,7 @@ return {
 						desc_hl = "@constructor",
 						key = "t",
 						key_hl = "DashboardShortCut",
-						action = "Neotree toggle",
+						action = "Neotree " .. vim.fn.expand("~"),
 					},
 					{
 						icon = " ",
@@ -75,6 +78,15 @@ return {
 						action = "Telescope oldfiles",
 					},
 					{
+						icon = " ",
+						icon_hl = "@function",
+						desc = "Gerenciar Sessões",
+						desc_hl = "@constructor",
+						key = "m",
+						key_hl = "DashboardShortCut",
+						action = "SessionManager",
+					},
+					{
 						icon = " ",
 						icon_hl = "@function",
 						desc = "Sair",
@@ -85,6 +97,10 @@ return {
 					},
 				},
 				footer = {
+					"",
+					"",
+					"",
+					"",
 					"",
 					"O VOID TEM FIM(?)",
 					"",
